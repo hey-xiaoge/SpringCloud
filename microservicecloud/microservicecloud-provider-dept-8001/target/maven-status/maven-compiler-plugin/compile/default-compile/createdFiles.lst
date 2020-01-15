@@ -1,0 +1,5 @@
+pri\xf\springcloud\controller\DeptController.class
+pri\xf\springcloud\dao\DeptDao.class
+pri\xf\springcloud\DeptProvider8001_App.class
+pri\xf\springcloud\service\DeptService.class
+pri\xf\springcloud\service\impl\DeptServiceImpl.class
