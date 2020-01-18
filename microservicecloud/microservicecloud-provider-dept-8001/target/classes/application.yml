@@ -3,7 +3,7 @@ server:
 
 mybatis:
   config-location: classpath:mybatis/config.xml            # mybatis配置文件所在路径
-  type-aliases-package: pri.xf.springcloud.model      # 所有Entity别名类所在包
+  type-aliases-package: pri.xf.springcloud.model      # 所有model别名类所在包
   mapper-locations:
   - classpath:mybatis/mapper/*.xml       # mapper映射文件
 
@@ -24,14 +24,14 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka,
   instance:
-#    instance-id: microservicecloud-dept8001
-    prefer-ip-address: false #可以显示ip地址
+    instance-id: microservicecloud-dept8001
+    prefer-ip-address: true #可以显示ip地址
 
 
-#info:
-#  app.name: xiaofeng-microservicecloud
-#  company.name: www.xiaofeng.com
-#  build.artifactId: microservicecloud-provider-dept-8001
-#  build.version: 1.0-SNAPSHOT
+info:
+  app.name: xiaofeng-microservicecloud
+  company.name: www.xiaofeng.com
+  build.artifactId: microservicecloud-provider-dept-8001
+  build.version: 1.0-SNAPSHOT
