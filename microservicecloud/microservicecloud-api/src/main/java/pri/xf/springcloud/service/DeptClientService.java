@@ -8,14 +8,14 @@ import pri.xf.springcloud.model.Dept;
 
 import java.util.List;
 
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+@FeignClient(value = "MICROSERVICECLOUD-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @PostMapping(value = "/dept/add")
     public boolean add(Dept dept) ;
 
     @GetMapping("/dept/get/{id}")
-    public Dept get(@PathVariable("id") Long id) ;
+    public Dept get(@PathVariable("id") long id) ;
 
     @GetMapping("/dept/list")
     public List<Dept> list();

@@ -13,7 +13,7 @@ public interface DeptDao
           public boolean addDept(Dept dept);
 
 
-          public Dept findById(Long id);
+          public Dept findById(long id);
 
 
           public List<Dept> findAll();
